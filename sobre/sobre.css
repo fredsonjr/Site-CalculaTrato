@@ -1,0 +1,81 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2{
+    padding-bottom: 20px;
+}
+
+h2{
+    padding-top: 20px;
+}
+
+main {
+    padding: 40px;
+    color: rgb(52, 58, 64);
+}
+
+.psobre {
+    line-height: 2;
+    text-align: justify;
+    text-indent: 1.5rem;
+}
+
+/*Button*/
+
+.lastUl {
+    list-style: none;
+}
+
+.lastUl button .buttonAbout{
+    color: #212529;
+    text-decoration: none;
+}
+
+.lastUl {
+    padding: 0;
+    margin-top: 30px;
+}
+
+
+@media (max-width: 767px){
+    main {
+        font-size: 0.9rem;
+    }
+
+    main h1{
+        font-size: 2rem;
+    }
+
+    main h2{
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 768px){
+    main {
+        font-size: 1rem;
+    }
+
+    main h1{
+        font-size: 2.2rem;
+    }
+
+    main h2{
+        font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 992px){
+    main {
+        font-size: 1rem;
+    }
+
+    main h1{
+        font-size: 2.5rem;
+    }
+
+   main h2{
+        font-size: 2.5rem;
+    }
+}

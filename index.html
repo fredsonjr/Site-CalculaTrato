@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calcula Trato, uma calculadora prática para uma alimentação balanceada de cavalos, buscando dimunir o desperdício de alimentos e melhorar o desempenho do seu animal nas atividades.">
+    <meta name="keywords" content="calcula, trato, calculadora, cavalo, feno, ração">
+    
+    <title>Calcula Trato</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="shortcut icon" href="imagens/logo-removebg-preview.png" type="image/x-icon">
+
+    <!--sources-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap" rel="stylesheet">    
+
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--fontawesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">Calcula Trato</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre/sobre.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#form">Calcular</a>
+                    </li>
+                    <li class="nav-item">
+                        <a target="_blank" class="nav-link" href="https://www.youtube.com/channel/UCdV1IMoKUDeaYDbNy0A1fSg"><i class="fab fa-youtube"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a target="_blank" class="nav-link" href="https://www.instagram.com/marcosp_mc/"><i class="fab fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    
+    <article>
+        <div class="start">
+            <h1>Por que usar o Calcula Trato? </h1>
+        
+        </div>
+        <section id="features">
+            <div class="row">
+                <div class="benefits col-lg-4">
+                    <i class="fas fa-hand-holding-usd fa-4x icon"></i>
+                    <h2>Economia</h2>
+                    <p>Mais precisão e menos desperdício.</p>
+                </div>
+                <div class="benefits col-lg-4">
+                    <i class="fas fa-check fa-4x icon"></i>
+                    <h2>Praticidade</h2>
+                    <p>Cálculos rápidos e práticos.</p>
+                </div>
+                <div class="benefits col-lg-4">
+                    <i class="fas fa-horse fa-4x icon"></i>
+                    <h2>Balanço Nutritivo</h2>
+                    <p>Seu animal sempre disposto nas atividades.</p>
+                </div>
+            </div>
+        </section>
+    </article>
+        
+    
+    <main>
+        <div class="form row" id="calculator">
+            <div class="col-lg-6 col-md-6">
+                <legend><a name="form">Entre com os dados do seu animal</a></legend>
+                <label for="idadebusca">Idade*</label>
+                <input type="number" min="1" name="idade" id="idadebusca" class="campbutton" placeholder="Idade em anos">
+                <label for="pesobusca">Peso (Kg)*</label>
+                <input type="number" min="1" name="peso" id="pesobusca" class="campbutton" placeholder="Peso em Kg">
+                <label for="volumosobusca">Tipo de Volumoso/Ração*</label>
+                <select name="volumoso" id="alimentobusca" class="campbutton select">
+                    <option disabled hidden selected value=0>Selecione</option>
+                    <option value="0.02">Feno Tifton</option>
+                    <option value="0.012">Feno Alfafa</option>
+                    <option value="0.035">Silagem</option>
+                    <option value="0.04">Capim</option>
+                    <option value="0.008">Ração</option>
+                </select>
+                <button  class="button btn btn-warning" onclick="verificar()">Calcular</button>
+            </div>
+
+            
+            <div class="col-lg-5 col-md-5 p-back sm-back" >
+                <h3>Resultado (Quantidade diária):</h3>
+                <h3></h3>
+                <div id="res"></div>
+            </div>
+            
+        </div>
+    </main>
+
+    <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">Como os cálculos são realizados?</h5>
+          <a href="sobre/sobre.html" class="btn btn-primary btn-dark">Ir para a página</a>
+        </div>
+    </div>
+
+    
+
+    <footer>
+        <div class="icon4">
+            <a target="_blank" href="https://www.linkedin.com/in/fredson-junior-246571207/"><i class="fab fa-linkedin icon3"></i></a>
+            <a href="mailto:fredson.cocco.jr@hotmail.com"><i class="far fa-envelope icon3"></i></a>
+        </div>
+        <p> 
+            &copy; Calcula Trato | Desenvolvido por Fredson Cocco Jr. 
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+</body>
+</html>
